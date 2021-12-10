@@ -48,3 +48,4 @@ foreach($filmes as $linha)
 
 pg_close($connection);
 ?>
+

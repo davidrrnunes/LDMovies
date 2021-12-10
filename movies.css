@@ -14,72 +14,7 @@ body{
     bottom: 0;
     left: 0;
     right: 0;
-}
-
-.logo{
-    display: block;
-    position: absolute;
-    width: 250px;
-    height: 120px;
-    /* border: 5px solid red; */
-}
-
-img{
-    position: absolute;
-    top: -20px;
-    width: 250px;
-    height: auto;
-    object-fit: contain;
-}
-
-.allmovies {
-    width: 1000px;
-    height: 700px;
-    border: 5px solid red;
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 300px;
-    bottom: 0;
-    margin: auto;
-
-    overflow-y: scroll;
-
-}
-
-
-.allmovies::-webkit-scrollbar {
-    display: none;
-}
-
-.individualmovie{
-    width: 210px;
-    height:310px;
-    position: relative;
-    display: inline-block;
-    margin: 10px 12px;
-    border: 5px solid red;
     color: white;
-    font-family: "Times New Roman", Times, serif;
-}
-
-.individualmovie h1{
-    left: 5px;
-    position: absolute;
-    top: 45%;
-}
-
-.individualmovie h2{
-    left: 5px;
-    position: absolute;
-    top: 60%;
-}
-
-.individualmovie h3{
-    left: 5px;
-    position: absolute;
-    top: 70%;
 }
 
 ul {
@@ -87,7 +22,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: none;
+    background-color: #333;
   }
   
   li {

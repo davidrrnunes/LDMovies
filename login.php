@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php
-    require('connection.BD.php');
+    require('connectionBD.php');
     session_start();
 
     if(isset($_POST['uname'])){
@@ -38,7 +38,7 @@
             <input type="password" placeholder="Enter Password" name="psw">
                 
             <button type="submit" class="mainBtn">Login</button>
-            <span >Haven't registred yet?<a href="register.php">Sign in</a></span>
+            <span >Haven't registred yet?<a href="register.php">Sign up</a></span>
             </div>
         </form>
     </div>

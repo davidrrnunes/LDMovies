@@ -3,32 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin_filmes</title>
+    <link rel="stylesheet" type="text/css" href="Admin%20filmes.css">
 </head>
 <body>
 
-<form method="get" action="Admin filmes.php">
+<div class="fundo">
+</div>
 
-    Adicionar filme <br/>
-    <label>
-        Título: <input name="filmetitulo" type="text"/> <br/>
-        Ano:  <input name="filmeano" type="number"/> <br/>
-        Preço: <input name="filmepreço" type="number"/> <br/>
-        Ator 1: <input name="filmeator1" type="text"/> <br/>
-        Ator 2: <input name="filmeator2" type="text"/> <br/>
-        Ator 3: <input name="filmeator3" type="text"/> <br/>
-        Número: <input name="numero" type="text"/> <br/>
-    </label>
+<div class="logo">
+    <img src="imagens/Logo.png">
+</div>
 
-    <input type="submit" value="Submeter" />
+<div class="popupbutton">
 
-    Remover filme <br/>
-    <label>
-        Título: <input name="removertitulo" type="text"/> <br/>
-    </label>
+</div>
 
-    <input type="submit" value="Remover" />
+<div class="popup">
 
-</form>
+    <form method="get" >
+
+
+        <div class="Adicionar">
+            Adicionar filme <br/>
+            <label>
+                Título: <input name="filmetitulo" type="text"/> <br/>
+                Ano:  <input name="filmeano" type="number"/> <br/>
+                Preço: <input name="filmepreço" type="number"/> <br/>
+                Ator 1: <input name="filmeator1" type="text"/> <br/>
+                Ator 2: <input name="filmeator2" type="text"/> <br/>
+                Ator 3: <input name="filmeator3" type="text"/> <br/>
+                Número: <input name="numero" type="text"/> <br/>
+            </label>
+
+            <input type="submit" value="Submeter" />
+
+        </div>
+
+        <div class="Remover">
+            Remover filme <br/>
+            <label>
+                Título: <input name="removertitulo" type="text"/> <br/>
+            </label>
+
+            <input type="submit" value="Remover" />
+
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+let openindex = document.querySelector(".popupbutton");
+
+openindex.addEventListener("click", function() {
+    console.log("popup");
+
+    document.querySelector(".popup").classList.add("show");
+});
+</script>
+
+
+
 
 </body>
 </html>

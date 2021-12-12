@@ -15,7 +15,7 @@
         </a>
     </div>
 
-    <div clas="FilmeInfo">
+    <div class="FilmeInfo">
         <h1>Shrek</h1>
         <h2></h2>
     </div>

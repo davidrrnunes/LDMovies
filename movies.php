@@ -43,12 +43,24 @@
                 <div class="compraFilme">
                     <form method="POST">
                         <h1>Buy now</h1>
-                        <h2>10€</h2>
+                        <h2>5€</h2>
                         <button type="submit" name="confirm">Confirm</button>
                     </form>
                 </div>
             </div>
         </div>
+
+
+
+
+
+        <?php
+
+
+
+
+        ?>
+
     </div>
 </body>
 </html>

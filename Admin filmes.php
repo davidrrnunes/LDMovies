@@ -21,11 +21,13 @@ $query = "INSERT into filme VALUES ('$filmetitulo', '$filmeano', '$filmepreco', 
 
 $filmes = pg_query($connection, $query);
 
+
 $removertitulo = $_GET['removertitulo'];
 
 $query = "delete from filme where titulo='$removertitulo'";
 
 $filmes = pg_query($connection, $query);
+
 
 
 pg_close($connection);

@@ -18,8 +18,7 @@
     <form method="get">
         Pesquisar
         <label>
-            <input name="pesquisatitulo" type="text"/>
-            <input name="pesquisaano" type="number">
+            <input name="pesquisatitulo" type="text"/
         </label>
         <input type="submit"  value="Pesquisar" name="BotaoPesquisa"/>
         <button  type="button" id="search" >Show</button>
@@ -84,11 +83,9 @@ if (!$connection) {
     die("Erro na ligacao");
 }
 $pesquisatitulo = $_GET['pesquisatitulo'];
-$pesquisaano = $_GET['pesquisaano'];
 
-$query = "SELECT * from filme where titulo='$pesquisatitulo'";
 
-$pesquisa = pg_query($connection, $query);
+$pesquisa = pg_query("SELECT * from filme where titulo='$pesquisatitulo'");
 
 $resultados = pg_fetch_row($pesquisa);
 

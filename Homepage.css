@@ -34,13 +34,13 @@ img{
 
 .allmovies {
     width: 1000px;
-    height: 700px;
+    height: 500px;
     border: 5px solid red;
     display: block;
     position: absolute;
     left: 0;
     right: 0;
-    top: 300px;
+    top: 200px;
     bottom: 0;
     margin: auto;
 
@@ -61,7 +61,6 @@ img{
     margin: 10px 12px;
     border: 5px solid red;
     color: white;
-    font-family: "Times New Roman", Times, serif;
 }
 
 .individualmovie h1{
@@ -80,4 +79,61 @@ img{
     left: 5px;
     position: absolute;
     top: 70%;
+}
+
+.Pesquisa{
+    width: 160px;
+
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    right: 50px;
+}
+
+.filmepesquisa{
+    visibility: hidden;
+    width: 1000px;
+    height: 500px;
+    border: 5px solid red;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+    bottom: 0;
+    margin: auto;
+    background-color: #67008B;
+}
+
+.filmepesquisaindividual{
+    width: 210px;
+    height:310px;
+    position: relative;
+    display: inline-block;
+    margin: 10px 12px;
+    border: 5px solid red;
+    color: white;
+}
+
+.filmepesquisaindividual h1{
+    left: 5px;
+    position: absolute;
+    top: 45%;
+}
+
+.filmepesquisaindividual h2{
+    left: 5px;
+    position: absolute;
+    top: 60%;
+}
+
+.filmepesquisaindividual h3{
+    left: 5px;
+    position: absolute;
+    top: 70%;
+}
+
+.filmepesquisa.show {
+    visibility: visible;
 }

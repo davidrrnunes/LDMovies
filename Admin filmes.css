@@ -32,34 +32,15 @@ img{
     object-fit: contain;
 }
 
-
-.Adicionar{
-    position: absolute;
-    display: inline-block;
-    margin: 10px 12px;
-    border: 5px solid red;
-    color: white;
-}
-
-.Remover{
-    position: absolute;
-    display: inline-block;
-    top: 400px;
-    margin: 10px 12px;
-    border: 5px solid red;
-    color: white;
-}
-
-
 .allmovies {
     width: 1000px;
-    height: 700px;
+    height: 500px;
     border: 5px solid red;
     display: block;
     position: absolute;
     left: 0;
     right: 0;
-    top: 300px;
+    top: 200px;
     bottom: 0;
     margin: auto;
 
@@ -83,12 +64,36 @@ img{
     top: 45%;
 }
 
+.individualmovie h2{
+    left: 5px;
+    position: relative;
+    top: 60%;
+}
 
-.popupbutton{
+.individualmovie h3{
+    left: 5px;
+    position: absolute;
+    top: 70%;
+}
+
+
+
+.formularios{
+    display: block;
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    top: 100px;
+}
+
+
+/* Botões dos popups*/
+
+.popupbuttonAdd{
     width: 100px;
     height:100px;
     position: relative;
-    display: inline-block;
+    display: block;
     margin: 10px 12px;
     border: 5px solid red;
     color: white;
@@ -96,21 +101,33 @@ img{
     cursor: pointer;
 }
 
-
-.popup {
+.popupbuttonRem{
+    width: 100px;
+    height:100px;
     position: relative;
-    display: inline-block;
+    display: block;
+    margin: 10px 12px;
+    border: 5px solid red;
+    color: white;
+    top: 400px;
+    cursor: pointer;
+}
+
+/*Popups*/
+
+.popupAdd {
+    position: relative;
+    display: block;
     cursor: pointer;
     top: 100px;
     left: 400px;
 }
 
 /* The actual popup (appears on top) */
-.popup  {
+.popupAdd {
     visibility: hidden;
     width: 160px;
-    background-color: #555;
-    color: #fff;
+
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
@@ -123,7 +140,41 @@ img{
 
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup.show {
+.popupAdd.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+
+
+
+.popupRem {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    top: 100px;
+    left: 400px;
+}
+
+/* The actual popup (appears on top) */
+.popupRem  {
+    visibility: hidden;
+    width: 160px;
+
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popupRem.show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s

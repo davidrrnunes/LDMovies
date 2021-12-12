@@ -1,5 +1,6 @@
 body{
     overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -8,16 +9,23 @@ body{
     height: 100%;
     background-image: linear-gradient(#0D2B58, #67008B);
     margin: auto;
-    display: block;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; 
     color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
 .mainBtn {
+    margin-top: 20px;
     display: block;
     background: rgba(103, 0, 139, 0.6);
     border: 3px solid #67008B;
@@ -26,6 +34,7 @@ body{
 }
 
 span {
+    margin-top: 20px;
     display: block;
 }
 

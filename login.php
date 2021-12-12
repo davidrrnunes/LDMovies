@@ -8,42 +8,48 @@
     <title>Login</title>
 </head>
 <body>
-    <?php
-    require('connectionBD.php');
-    session_start();
-
-    if(isset($_POST['uname'])){
-        $uname = $_REQUEST['uname'];
-        $psw = $_REQUEST['psw'];
-        $loginquery = "SELECT * FROM cliente WHERE username = '$uname' AND password = '$psw';
-                    VALUES ('$uname', '$psw')";
-        
-        $cliente = pg_query($connection, $loginquery);
-
-        $rows = pg_num_rows($cliente);
-
-        if($rows == 1){
-            $_SESSION['username'] = $username;
-            header("Location: Homepage.php");
-        }
-    } else {
-    ?>
     <div class="fundo">
-        <form method="post">
-            <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname">
+        <?php
+        require('connectionBD.php');
+        session_start();
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw">
-                
-            <button type="submit" class="mainBtn">Login</button>
-            <span >Haven't registred yet?<a href="register.php">Sign up</a></span>
+        if(isset($_POST['uname'])){
+            $uname = $_REQUEST['uname'];
+            $psw = $_REQUEST['psw'];
+            $loginquery = "SELECT * FROM cliente WHERE username = '$uname' AND password = '$psw';
+                        VALUES ('$uname', '$psw')";
+            
+            $cliente = pg_query($connection, $loginquery);
+
+            $rows = pg_num_rows($cliente);
+
+            if($rows == 1){
+                $_SESSION['uname'] = $username;
+                header("Location: Homepage.php");
+            }
+        } else {
+        ?>
+            <div class="logoLogin">
+                <img src="imagens/Logo.png">
             </div>
-        </form>
+
+            <div class="formLogin">
+                <form method="post">
+                    <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname">
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw">
+                        
+                    <button type="submit" class="mainBtn">Login</button>
+                    <span >Haven't registred yet?<a href="register.php">Sign up</a></span>
+                    </div>
+                </form>
+            </div>
+        <?php
+            }
+        ?>
     </div>
-    <?php
-        }
-    ?>
 </body>
 </html>

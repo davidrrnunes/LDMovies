@@ -32,18 +32,24 @@
                 }
             } else {
         ?>
-            <form method="POST">
-                <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+            <div class="logoLogin">
+                <img src="imagens/Logo.png">
+            </div>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+            <div class="formLogin">
+                <form method="POST">
+                    <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <br>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
 
-                <button type="submit" class="mainBtn">Sign up</button>
-                <span >Already have an account?<a href="login.php">Login</a></span>
-                </div>
-            </form>
+                    <button type="submit" class="mainBtn">Sign up</button>
+                    <span >Already have an account?<a href="login.php">Login</a></span>
+                    </div>
+                </form>
+            </div>
         <?php
             }
             exit();

@@ -36,10 +36,10 @@
             <div class="formLogin">
                 <form method="post">
                     <div class="container">
-                    <label for="uname"><b>Username</b></label>
+                    <label class="top" for="uname"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="uname">
-
-                    <label for="psw"><b>Password</b></label>
+                    <br>
+                    <label class="top" for="psw"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="psw">
                         
                     <button type="submit" class="mainBtn">Login</button>

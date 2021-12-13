@@ -2,7 +2,7 @@ function filme(i){
     location.href = "/filme.php?i="+i;
 }
 
-function comprar(i){
+function compra(i){
     location.href = "/compra.php?i="+i;
 }
 

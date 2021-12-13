@@ -1,5 +1,6 @@
 body{
     overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -35,7 +36,7 @@ img{
 .allmovies {
     width: 1000px;
     height: 500px;
-    border: 5px solid red;
+    border: 5px solid #67008B;
     display: block;
     position: absolute;
     left: 0;
@@ -48,13 +49,18 @@ img{
 
 }
 
+.allmovies::-webkit-scrollbar {
+    display: none;
+}
+
+
 .individualmovie{
     width: 210px;
     height:310px;
     position: relative;
     display: inline-block;
     margin: 10px 12px;
-    border: 5px solid red;
+    border: 5px solid #67008B;
     color: white;
 }
 
@@ -84,6 +90,7 @@ img{
     width: 1000px;
     height: 400px;
     top: 100px;
+
 }
 
 
@@ -95,10 +102,15 @@ img{
     position: relative;
     display: block;
     margin: 10px 12px;
-    border: 5px solid red;
+    border: 5px solid #67008B;
     color: white;
     top: 200px;
     cursor: pointer;
+    background-color: #67008B;
+}
+
+.popupbuttonAdd h3{
+
 }
 
 .popupbuttonRem{
@@ -107,10 +119,11 @@ img{
     position: relative;
     display: block;
     margin: 10px 12px;
-    border: 5px solid red;
+    border: 5px solid #67008B;
     color: white;
-    top: 400px;
+    top: 250px;
     cursor: pointer;
+    background-color: #67008B;
 }
 
 /*Popups*/
@@ -121,13 +134,15 @@ img{
     cursor: pointer;
     top: 100px;
     left: 400px;
+    color: white;
+    background-color: #67008B;
 }
 
 /* The actual popup (appears on top) */
 .popupAdd {
     visibility: hidden;
-    width: 160px;
-
+    width: 200px;
+    height: 330px;
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
@@ -155,13 +170,15 @@ img{
     cursor: pointer;
     top: 100px;
     left: 400px;
+    background-color: #67008B;
+    color: white;
 }
 
 /* The actual popup (appears on top) */
 .popupRem  {
     visibility: hidden;
-    width: 160px;
-
+    width: 200px;
+    height: 100px;
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
@@ -170,6 +187,7 @@ img{
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
+    background-color: #67008B;
 }
 
 

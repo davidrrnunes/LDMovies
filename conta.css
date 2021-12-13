@@ -22,6 +22,7 @@ body{
     position: absolute;
     width: 250px;
     height: 120px;
+    /* border: 5px solid red; */
 }
 
 img{
@@ -30,28 +31,4 @@ img{
     width: 250px;
     height: auto;
     object-fit: contain;
-}
-
-.Saldoatual{
-    width: 210px;
-    height:310px;
-    position: relative;
-    display: block;
-    margin: 10px 12px;
-
-    color: white;
-    font-size: 50px;
-    font-family: Roboto Light, sans-serif;
-    top: 40px;
-
-}
-
-.Saldoatual h2{
-    position: absolute;
-}
-
-.Saldoatual h3{
-    text-align: center;
-    position: absolute;
-    top: 100px;
 }

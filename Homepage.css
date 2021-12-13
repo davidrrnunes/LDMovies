@@ -36,7 +36,7 @@ img{
 .allmovies {
     width: 1000px;
     height: 500px;
-    border: 5px solid red;
+
     display: block;
     position: absolute;
     left: 0;
@@ -60,7 +60,7 @@ img{
     position: relative;
     display: inline-block;
     margin: 10px 12px;
-    border: 5px solid red;
+    border: 3px solid #67008B;
     color: white;
 }
 
@@ -84,12 +84,26 @@ img{
 
 .Pesquisa{
     width: 160px;
-
     text-align: center;
     border-radius: 6px;
     padding: 8px 0;
     position: absolute;
-    right: 50px;
+    right: 200px;
+    color: white;
+}
+
+.boneco{
+    width: 160px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    right: 40px;
+    color: white;
+}
+
+.boneco a{
+    color: white;
 }
 
 .filmepesquisa{
@@ -114,6 +128,12 @@ img{
     display: inline-block;
     margin: 10px 12px;
     border: 5px solid red;
+    color: white;
+}
+
+.Comprar{
+    position: relative;
+    display: block;
     color: white;
 }
 
@@ -146,7 +166,7 @@ img{
     position: absolute;
     display: block;
     margin: 10px 12px;
-    border: 5px solid red;
+    border: 5px solid #67008B;
     color: white;
     top: 400px;
     cursor: pointer;

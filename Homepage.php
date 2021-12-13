@@ -13,10 +13,12 @@
     <img src="imagens/Logo.png">
 </div>
 
+    <div class="boneco" >
+    <a href="logout.php">Logout</a>
+    </div>
 
 <div class="Pesquisa">
-    <a  href="filme.php"> link </a>
-    <form method="get">
+       <form method="get">
         Pesquisar
         <label>
             <input name="pesquisatitulo" type="text"/
@@ -30,34 +32,6 @@
 
 
 <div class="allmovies">
-
-    <?php
-
-    $ldm = "dbname=postgres user=postgres password=postgres host=localhost
-port=5432";
-
-    $connection = pg_connect($ldm);
-    if (!$connection) {
-        die("Erro na ligacao");
-    }
-    $query = "SELECT * FROM filme";
-    $resultados = pg_query($connection, $query);
-    $numFilmes = pg_num_rows($resultados);
-    for($i = 1; $i <= $numFilmes; $i++){
-        $rows= pg_query("select * from filme where nr='". $i ."'");
-        $filme = pg_fetch_row($rows);
-        echo
-            '
-        <div onclick=" filme(' . $i . ')" value="' . $i . '">
-        
-        click
-           
-        </div>
-    ';
-    }
-
-    ?>
-
 
 
     <?php
@@ -75,12 +49,13 @@ port=5432";
     $resultados = pg_query($connection, $query);
 
     $filmescount = pg_num_rows($resultados);
-                    for($n = 1; $n <= $filmescount; $n++) {
-                        $rows = pg_query("select * from filme where nr='".$n."' order by titulo ");
+                    for($i = 1; $i <= $filmescount; $i++) {
+                        $rows = pg_query("select * from filme where nr='".$i."'");
                         $filmes = pg_fetch_row($rows);
 
                         echo
-                            ' <div class="individualmovie">
+                            ' <div class="individualmovie"  onclick=" filme(' . $i . ')" value="' . $i . '">
+ 
         <h1>' . $filmes[0] . '</h1>
         <h2>' . $filmes[1] . '</h2>
         <h3>' . $filmes[4] . ' </br>

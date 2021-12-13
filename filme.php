@@ -49,12 +49,8 @@ for ($j = 0; $j < $numColumns; $j++) {
     }
 }
 if($comprado==0){
-    echo '
-<form method="get" action="compra.php">
-<button type="submit" >Comprar</button>
-</form>
-';
 
+echo '<button type="button" onclick="compra(' . $i . ')" value="' . $i . '">Comprar</button>';
 
 }
 
@@ -64,7 +60,7 @@ if($comprado==0){
 
     }
 
-
+    pg_close($connection);
     ?>
 
 

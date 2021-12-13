@@ -56,12 +56,12 @@ pg_close($connection);
     <div class="formularios">
 
         <div class="popupbuttonAdd">
-
+        <h3>Adicionar</h3>
         </div>
 
 
         <div class="popupbuttonRem">
-
+            <h3>Remover</h3>
         </div>
 
 

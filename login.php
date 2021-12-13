@@ -24,7 +24,7 @@
             $rows = pg_num_rows($cliente);
 
             if($rows == 1){
-                $_SESSION['uname'] = $username;
+                $_SESSION['uname'] = $uname;
                 header("Location: Homepage.php");
             }
         } else {

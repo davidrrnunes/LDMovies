@@ -34,8 +34,6 @@ port=5432";
 
     $saldodestino = $saldodestino + $transmontante;
 
-    echo $saldodestino;
-
     $resultado = pg_query("update cliente set saldo='".  $saldodestino ."' where username='$destino'");
 
     $resultado= pg_query($connection, $query);
@@ -48,8 +46,6 @@ port=5432";
     $saldo =pg_fetch_result($resultado,0,0);
 
     $saldo = $saldo - $transmontante;
-
-    echo $saldo;
 
     $resultado1 = pg_query("update cliente set saldo='".  $saldo ."' where username='bruh'");
 

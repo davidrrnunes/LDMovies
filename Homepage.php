@@ -15,6 +15,7 @@
 
 
 <div class="Pesquisa">
+    <a  href="filme.php"> link </a>
     <form method="get">
         Pesquisar
         <label>
@@ -29,6 +30,35 @@
 
 
 <div class="allmovies">
+
+    <?php
+
+    $ldm = "dbname=postgres user=postgres password=postgres host=localhost
+port=5432";
+
+    $connection = pg_connect($ldm);
+    if (!$connection) {
+        die("Erro na ligacao");
+    }
+    $query = "SELECT * FROM filme";
+    $resultados = pg_query($connection, $query);
+    $numFilmes = pg_num_rows($resultados);
+    for($i = 1; $i <= $numFilmes; $i++){
+        $rows= pg_query("select * from filme where nr='". $i ."'");
+        $filme = pg_fetch_row($rows);
+        echo
+            '
+        <div onclick=" filme(' . $i . ')" value="' . $i . '">
+        
+        click
+           
+        </div>
+    ';
+    }
+
+    ?>
+
+
 
     <?php
 
@@ -109,6 +139,9 @@ pg_close($connection);
 
 ?>
 
+
+
+
 <script>
     let openindex = document.getElementById("search");
 
@@ -124,5 +157,8 @@ pg_close($connection);
     }
 
 </script>
+
+
+<script type="text/javascript" src="menu.js"></script>
 </body>
 </html>
